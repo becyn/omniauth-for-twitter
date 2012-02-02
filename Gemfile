@@ -34,3 +34,9 @@ group :test do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
 end
+
+# --
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'rspec'
+gem 'rspec-rails'
