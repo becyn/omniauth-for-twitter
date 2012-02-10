@@ -1,4 +1,9 @@
 OmniauthForTwitter::Application.routes.draw do
+
+  root :to => 'pages#index'
+
+  resources :users, :only => [:show, :destroy]
+
   match "/auth/:provider/callback" => "sessions#callback"
   match "/logout" => "sessions#destroy", :as => :logout
 
