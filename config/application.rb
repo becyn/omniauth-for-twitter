@@ -44,5 +44,8 @@ module OmniauthForTwitter
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # for omniauth with twitter
+    Rails.application.config.twitter = YAML.load_file(File.join(Rails.root, "config", "twitter.yml" ))
   end
 end

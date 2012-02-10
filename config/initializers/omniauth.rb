@@ -1,3 +1,4 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :twitter,"Consumer key","Consumer secret"
+  config = Rails.application.config.twitter["development"]
+  provider :twitter, config["consumer_key"], config["consumer_secret"]
 end
