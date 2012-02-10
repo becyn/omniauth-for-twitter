@@ -8,6 +8,20 @@
 </head>
 <body>
 
+<div id="user_nav">
+  <% if current_user %>
+    <%= link_to "ログアウト" ,logout_path %>
+    <div class=40>
+      userinfo
+      <%= image_tag current_user.icon_url %>
+      <%= current_user.twitter_id %>
+    </div>
+  <% else %>
+    <%= link_to "Twitterでlogin","/auth/twitter" %>
+  <% end %>
+</div>
+
+
 <%= yield %>
 
 </body>
