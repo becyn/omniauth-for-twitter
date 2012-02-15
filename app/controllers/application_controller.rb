@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :authenticated?
 
   def current_user
-    @current_user ||= User.find_by_id(session[:user_id])
+    @current_user ||= User.find_by_id_and_created_at(session[:user_id],session[:user_created_at])
   end
   helper_method :current_user
 

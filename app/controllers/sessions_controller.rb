@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
        user.save
      end
      session[:user_id] = user.id
-     session[:created_at] = user.created_at
+     session[:user_created_at] = user.created_at
      redirect_to root_url, :notice => "login&quot"
    end
 
